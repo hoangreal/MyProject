@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HFF-HSGS Football Federation</title>
+  <link rel="stylesheet" type="text/css" href="css/style_news.css">
+ </head>
+ <body>
+   <!--header-->
+   <div class="header">
+     <h1><a href="HFF-HSGS Football Federation.ejs" target="_blank"><img src="img/Logo.jpg"/></a></h1>
+   </div>
+   <!-- end header -->
+ 
+   <!-- navigation bar-->
+   <div class="topnav">
+     <ul>
+         <li><a href="#">Hồ sơ cầu thủ</a></li>
+         <li><a href="News.ejs">Tin tức</a></li>
+         <li><a href="#">Hướng dẫn</a></li>
+         <li><a href="#">Video</a></li>
+    </ul>
+    <div class="box">
+        <% data.rows.forEach(function(item){ %>
+         <span style="align: center"><img src="img/<%= item.image %>"/></span>
+          <h3><a href="new_details/<%= item.id %>"><span><%= item.topic %></span></a></h3>
+          <p><%= item.description %></p>
+           <% }) %>
+         </div>
+ </body>
+ </html>
+
+
+    
+ 
